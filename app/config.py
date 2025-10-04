@@ -5,3 +5,7 @@ from dotenv import load_dotenv
 
 # loading variables from .env file
 load_dotenv() 
+
+# API configuration
+AVIATIONSTACK_API_KEY = os.getenv("AVIATIONSTACK_API_KEY")
+AVIATIONSTACK_BASE_URL = os.getenv("AVIATIONSTACK_BASE_URL")
