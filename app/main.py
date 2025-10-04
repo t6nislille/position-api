@@ -8,4 +8,5 @@ params = {
 
 response = requests.get(f"{AVIATIONSTACK_BASE_URL}/flights", params=params)
 
-print(response.status_code)
+print("Status Code:", response.status_code)
+print("Response:", response.json())
