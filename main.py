@@ -1,6 +1,4 @@
-import requests
-from flask import Flask, jsonify
-from app.config import AVIATIONSTACK_API_KEY, AVIATIONSTACK_BASE_URL
+from flask import Flask
 
 
 # create the Flask instance
