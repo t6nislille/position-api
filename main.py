@@ -1,8 +1,12 @@
 from flask import Flask
+from app.routes.flights import flights_bp
 
 
 # create the Flask instance
 app = Flask(__name__)
+
+# attach flights blueprint to main 
+app.register_blueprint(flights_bp, url_prefix="/flights")
 
 
 @app.route("/")
