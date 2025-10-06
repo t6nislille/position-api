@@ -1,5 +1,5 @@
 import requests
-from flask import Flask
+from flask import Flask, jsonify
 from config import AVIATIONSTACK_API_KEY, AVIATIONSTACK_BASE_URL
 
 
@@ -12,5 +12,15 @@ params = {
 
 response = requests.get(f"{AVIATIONSTACK_BASE_URL}/flights", params=params)
 
-print("Status Code:", response.status_code)
-print("Response:", response.json())
+#print("Status Code:", response.status_code)
+#print("Response:", response.json())
+
+@app.route("/")
+def home():
+    return {"message": "Welcome to Position API"}
+
+
+
+# start the development server
+if __name__ == "__main__":
+    app.run(debug=True)
