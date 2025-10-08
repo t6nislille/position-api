@@ -1,5 +1,6 @@
 from flask import Flask
 from app.routes.flights import flights_bp
+from flask_swagger_ui import get_swaggerui_blueprint
 
 
 # create the Flask instance
