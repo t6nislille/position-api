@@ -1,0 +1,8 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Position API",
+    "description": "API to fetch flight information from AviationStack",
+    "version": "1.0.0"
+  }
+}
