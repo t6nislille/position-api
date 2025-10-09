@@ -4,5 +4,35 @@
     "title": "Position API",
     "description": "API to fetch flight information from AviationStack",
     "version": "1.0.0"
+  },
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/flights/{dep_iata}": {
+      "get": {
+        "summary": "Get flights from a specific airport",
+        "description": "Returns a list of flights departing from a given IATA airport code (e.g., TLL).",
+        "parameters": [
+          {
+            "name": "dep_iata",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Departure airport IATA code (e.g., TLL, RIX)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with flight data"
+          },
+          "400": {
+            "description": "Invalid IATA code or missing parameter"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
   }
 }
